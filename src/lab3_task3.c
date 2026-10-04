@@ -31,20 +31,7 @@
 
 // Function prototypes
 int my_strlen(const char *str);{
-    int count = 0;
-    while (str[count] != '\0') {
-        count++;
-    }
-    return count;
-}
-void my_strcpy(char *dest, const char *src); {
-    int i = 0;
-    while (src[i] != '\0') {
-        dest[i] = src[i];
-        i++;
-    }
-    dest[i] = '\0';
-}
+void my_strcpy(char *dest, const char *src); 
 
 int main(void) {
     char test[] = "Programming in C";
@@ -61,10 +48,17 @@ int main(void) {
 
 // Implement functions below
 int my_strlen(const char *str) {
-    // TODO: count characters until '\0'
-    return 0; // placeholder
+    int count = 0;
+    while (str[count] != '\0') {
+    count++;
+    }
+    return count;
 }
-
 void my_strcpy(char *dest, const char *src) {
-    // TODO: copy characters until '\0', then write the '\0' into dest
+    int i = 0;
+    while (src[i] != '\0') {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
 }
