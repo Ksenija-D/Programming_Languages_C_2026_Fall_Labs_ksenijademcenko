@@ -1,7 +1,7 @@
 /*
  * Lab 3, Task 3
- * Name: <your name>
- * Student ID: <your student ID>
+ * Name: Ksenia Demchenko
+ * Student ID: 25RDC083
  *
  * Implement basic string handling functions.
  * Write your own versions of:
@@ -30,8 +30,21 @@
 #include <stdio.h>
 
 // Function prototypes
-int my_strlen(const char *str);
-void my_strcpy(char *dest, const char *src);
+int my_strlen(const char *str);{
+    int count = 0;
+    while (str[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+void my_strcpy(char *dest, const char *src); {
+    int i = 0;
+    while (src[i] != '\0') {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
+}
 
 int main(void) {
     char test[] = "Programming in C";
