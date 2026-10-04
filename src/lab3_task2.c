@@ -28,16 +28,9 @@
 #include <stdio.h>
 
 // Function prototypes
-void swap(int *x, int *y);{
-    int temp = *x;
-    *x = *y;
-    *y = temp;
-}
+void swap(int *x, int *y);
  
-void modify_value(int *x);{
-    *x = *x * 2;
-}
-
+void modify_value(int *x);
 int main(void) {
     int a = 3, b = 7;
     printf("Before swap: a=%d, b=%d\n", a, b);
@@ -52,9 +45,11 @@ int main(void) {
 
 // Implement functions below
 void swap(int *x, int *y) {
-    // TODO: swap values using a temporary variable
+    int temp = *x;
+    *x = *y;
+    *y = temp;
 }
 
 void modify_value(int *x) {
-    // TODO: multiply value by 2
+    *x = *x * 2;
 }
