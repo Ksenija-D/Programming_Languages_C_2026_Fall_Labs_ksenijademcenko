@@ -30,10 +30,10 @@
 #include <stdio.h>
 
 // Function prototypes
-int my_strlen(const char *str);{
-void my_strcpy(char *dest, const char *src); 
+int my_strlen(const char* str) {
+  void my_strcpy(char* dest, const char* src);
 
-int main(void) {
+  int main(void) {
     char test[] = "Programming in C";
     char copy[100];
 
@@ -44,21 +44,21 @@ int main(void) {
     printf("Copy: %s\n", copy);
 
     return 0;
-}
+  }
 
-// Implement functions below
-int my_strlen(const char *str) {
+  // Implement functions below
+  int my_strlen(const char* str) {
     int count = 0;
     while (str[count] != '\0') {
-    count++;
+      count++;
     }
     return count;
-}
-void my_strcpy(char *dest, const char *src) {
+  }
+  void my_strcpy(char* dest, const char* src) {
     int i = 0;
     while (src[i] != '\0') {
-        dest[i] = src[i];
-        i++;
+      dest[i] = src[i];
+      i++;
     }
     dest[i] = '\0';
-}
+  }
